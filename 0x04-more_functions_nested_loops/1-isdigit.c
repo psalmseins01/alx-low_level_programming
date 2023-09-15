@@ -2,8 +2,7 @@
 /**
 * _isdigit - function that returns ascii characters from 48 to 57
 * @c: function parameter
-* Retrun: retrun 1 or 0
-*
+* Return: return 1 or 0
 *
 */
 
