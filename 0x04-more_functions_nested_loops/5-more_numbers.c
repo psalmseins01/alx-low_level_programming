@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* void more_numbers - function to print numbers using nested loop
+* more_numbers - function to print numbers using nested loop
 * Return: always return 0
 *
 */
@@ -22,5 +22,4 @@ void more_numbers(void)
 		}
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
