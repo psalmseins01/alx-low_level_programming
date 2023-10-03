@@ -1,5 +1,4 @@
 #include "main.h"
-#include "2-strlen.c"
 /**
  * _atoi - convertion of string to integer
  * @s: parameter s
@@ -8,38 +7,29 @@
  */
 int _atoi(char *s)
 {
-	int i;
-	int np = 0;
-	int c;
-	int d = 1;
+	int i = 0;
+	int sign = 1; /* 1 for positive, -1 for negative*/
 	int num = 0;
 
-	for (i = 0; i < _strlen(s); i++)
+	while (s[i] == ' ' || s[i] == '\t')
 	{
-		if (!(s[i] >= '0' && s[i] <= '9') && c > 0)
-			break;
-		if (s[i] == '-')
-			np--;
-		if (s[i] == '+')
-			np++;
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			c++;
-		}
+		i++;
 	}
-	while (c > 0)
+
+	if (s[i] == '-')
 	{
-		num += ((s[i - 1] - '0') * d);
-		i--;
-		c--;
-		d *= 10;
+		sign = -1;
+		i++;
 	}
-	if (np >= 0)
+	else if (s[i] == '+')
 	{
-		num *= 1;
-	} else
-	{
-		num *= -1;
+		i++;
 	}
-	return (num);
+
+	while (s[i] >= '0' && s[i] <= '9')
+	{
+		num = num * 10 + (s[i] - '0');
+		i++;
+	}
+	return (sign * num);
 }
