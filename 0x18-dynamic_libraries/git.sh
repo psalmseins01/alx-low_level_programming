@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-git add . && git commit -m "0x18. C - Dynamic libraries" && git push
+git add . && git commit -m "Dynamic library libdynamic.so containing all the functions" && git push
