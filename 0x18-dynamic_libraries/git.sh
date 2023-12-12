@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-git add . && git commit -m "Script that creates a dynamic library called liball.so from all the .c files" && git push
+git add . && git commit -m "Dynamic library that contains C functions that can be called from Python" && git push
